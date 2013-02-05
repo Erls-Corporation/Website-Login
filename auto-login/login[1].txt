@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META NAME=Copyright CONTENT="Copyright (c) 2003 3Com Corporation. All Rights Reserved.">
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<TITLE>Support </TITLE>
+
+<!-- External JavaScript file implementing Help popup window -->
+<SCRIPT src="../manual/helpscript.js"></SCRIPT>
+<link rel="stylesheet" href="main.css" type="text/css">
+
+<SCRIPT language=JavaScript>
+<!--
+
+if(window.opener != null)
+{
+	window.opener.top.location.href = "../main_frame_nologin.htm";
+	window .close();
+}
+
+if(parent.window.name == "HelpPage" || parent.window.name == "OnlineHelp")
+{
+	window.close();
+	top.location.href = "../main_frame_nologin.htm";
+}
+
+if(window.parent.location.href.indexOf("main_frame_nologin.htm") == -1)
+	top.location.href = "../main_frame_nologin.htm";
+
+function GetTimeFun()
+{
+	DateValue = new Date();
+	document.LOGIN.GetTimeVal.value=DateValue.getTime();
+}
+
+function GURL(x){location=x}
+
+function doLogin()
+{
+	//GetTimeFun();
+	document.LOGIN.submit();
+	//top.location="/main_frame_admin.htm";
+}
+
+function doCancel()
+{ 
+	document.LOGIN.reset();
+	//top.location="../main_frame_nologin.htm";
+}
+
+function validField(eventObj, obj) {
+	var keyCode
+	// Check For Browser Type
+	if (document.all){ 
+		keyCode=eventObj.keyCode
+	}
+	else{
+		keyCode=eventObj.which
+	}
+
+	var str=obj.value
+	
+	if(keyCode == 13){ // Allow only integers and decimal points
+	   
+	   GetTimeFun();
+	   return true
+	}
+}
+//-->
+</SCRIPT>
+
+</HEAD>
+<BODY  bgColor=#E7E7FF leftMargin=0 topMargin=0 MARGINWIDTH="0" MARGINHEIGHT="0" BORDER="0" onLoad="document.LOGIN.URL.focus();">
+
+<!-- banner -->
+<table width=100% height=75 border=0 cellspacing=0 cellpadding=5>
+<tr><td class=subtitle valign=bottom background=banner_files/sky_bg.gif>
+<IMG src=banner_files/apbannertxt.gif><BR>
+<IMG src="banner_files/pixel.gif" border=0 width=35 height=1>Login Screen
+</td></tr></table>
+
+<!-- tabs -->
+<table  height=18 border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td width=1300 background=banner_files/sky_tabbg.gif align=middle valign=center>&nbsp;</TD>
+</tr></table>
+
+<!-- start content -->
+
+<table border=0>
+<tr> <td colSpan=3><IMG height=10 src="banner_files/pixel.gif" border=0></td></tr>
+<tr>
+<FORM name=LOGIN action="login.htm" method="post">
+<input type="hidden" name="page" value="login">
+<input type="hidden" name="GetTimeVal">
+<td width=30>&nbsp;</td>
+
+<!-- content : data -->
+<td>
+<TABLE cellSpacing=0 cellPadding=3 border=0>
+  <TBODY>
+   <TR><TD class=titleCell>Enter System Password</TD></TR>
+   <TR><TD class=textCellC >
+         <BR>
+		 System&nbsp;Password&nbsp; 
+        <INPUT type="password" maxLength=255 size=9 name="URL">&nbsp;
+	    (default:<B>admin</B>)<BR><BR>
+        <INPUT class=actButton  type=button value="Log in" onclick="doLogin()";>&nbsp;&nbsp;&nbsp;&nbsp;
+        <INPUT  class=actButton onclick="doCancel()"; type=button value="Cancel">
+  </TD></TR>
+  <TR><TD class=noteCell>
+          <HR>
+          <b>Note:</b> The password is case sensitive. Click <A Href="javascript:popHlpFrmlss('h_forgotpassword.htm')">here</A> if you can't remember the password.
+  </TD></TR>
+  </TBODY></TABLE>
+
+</td>
+
+<!-- content: buttons -->
+<td width=100 align=right valign=top>
+<p>&nbsp;</p>
+
+</td>
+</FORM>
+</tr></table>
+
+
+<!-- copyright -->
+<table width=100% height=1000 border=0 cellspacing=0 cellpadding=0>
+<TR><TD class="copyright" valign=bottom >
+Copyright&nbsp;(c)&nbsp;2003&nbsp;&nbsp;3Com&nbsp;Corporation. All Rights Reserved. 
+</TD></TR></table>
+</BODY></HTML>

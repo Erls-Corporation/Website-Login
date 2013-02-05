@@ -1,0 +1,287 @@
+<html>
+
+<!--RAHUL MAHAJAN -->
+<!--SCRIPT DESIGNED AND DEVELOPED BY RAHUL MAHAJAN -->
+<!--MULTI-USER LOGIN WITH DATABASE CONNECTION-->
+<!--FEEL FREE TO MAKE CHANGES ACCORDINGLY-->
+<!--If you face any problem, Please mail me anytime-->
+<!--E-MAIL:mahajan_rahul@hotmail.com-->
+<!--Date: 5th May, 2005-->
+<!--Please rate it on www.planetsourcecode.com-->
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Multi-User Login With User Authentication :: Rahul Mahajan</title>
+<link rel="stylesheet" type="text/css" href="data/css.css">
+<STYLE TYPE="text/css"> 
+
+BODY 
+{ 
+scrollbar-base-color: #FFA400; 
+scrollbar-arrow-color: #FFFFFF;
+scrollbar-DarkShadow-Color: #FFA400; 
+}
+</STYLE>
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<!--PAGE BEGINS HERE-->
+
+<div align="center">
+  <center>
+  <table border="0" width="779" height="55" bgcolor="#FFA400" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="779" height="49">
+        <div align="left">
+          <table border="0" width="299" cellspacing="0" cellpadding="0" bgcolor="#FFA400">
+            <tr>
+              <td width="297"><b><font face="Verdana" size="2" color="#000000">&nbsp;&nbsp;
+                Rahul Mahajan</font></b></td>
+            </tr>
+            <tr>
+              <td width="297"><b><font face="Verdana" size="2" color="#000000">&nbsp;&nbsp;
+                E-Mail: </font><a href="mailto:mahajan_rahul@hotmail.com?Subject=Multi-UserLoginCodeQuery" target="_top"><font face="Verdana" size="2" color="#FFFFFF">mahajan_rahul@hotmail.com</font></a></b></td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+<p align="center"><b><font face="Verdana" size="2" color="#FF0000">Multiple User
+Accounts and User Login</font></b></p>
+<center>
+<table border="0" width="738" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="736"><font size="2" face="Verdana" color="#000080">Multiple User
+      Accounts with User Authentication with the help of Database connection.</font>
+      <p><font face="Verdana" size="2" color="#000080">Files included as follows
+      -&nbsp;</font></p>
+      <div align="center">
+        <center>
+        <table border="1" width="707">
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080"><b>File
+              Type</b></font></td>
+            <td width="17" valign="middle" align="left" height="30">
+              <p align="center"><font face="Verdana" size="2" color="#FFFFFF">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#000080"><b>File
+              Name</b></font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080"><b>Details</b></font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Registration
+              File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">registration.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">The
+              registration page for new user.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Login
+              File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">login.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">The
+              login page of website.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Forgot
+              Password File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">forget.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">The
+              password retrieving page of website.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Authentication
+              File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">logincheck.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">File
+              used for User/Login Authentication.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Protected
+              Area File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">protected.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">The
+              protected file/area of website.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Login
+              Check File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">validate.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">The
+              file use at the time of login.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Unauthorized
+              Area File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">unauthorized.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">File
+              will be shown on unauthorized login. </font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Logout
+              File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">logout.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">The
+              logout page of website.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Contact
+              Form</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">contactus.html</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">Feedback/Contact
+              Form of website.</font></td>
+          </tr>
+          <tr>
+            <td width="717" height="45" valign="middle" align="left" colspan="4"><font face="Verdana" size="2" color="#000080"><b>For
+              Administrator</b></font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">View
+              User Information File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">edituser.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">Admin
+              can view user's account information.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Delete
+              User File</font></td>
+            <td width="17" valign="middle" align="center" height="30"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="121" valign="middle" align="left" height="30"><font face="Verdana" size="2" color="#FF0000">deleteuser.asp</font></td>
+            <td width="333" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#008080">Admin
+              can delete user's account information.</font></td>
+          </tr>
+          <tr>
+            <td width="717" height="45" valign="middle" align="left" colspan="4">
+              <p align="center"><font face="Verdana" size="2" color="#000080">Database
+              File (i.e. users.mdb) is password protected named -&nbsp; </font><b><font face="Verdana" size="2" color="#0000FF">password</font></b></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Other
+              Added VBScripts &amp; Asp Files</font></td>
+            <td width="17" valign="middle" align="center" height="90" rowspan="3"><font face="Verdana" size="2" color="#000080">-</font></td>
+            <td width="454" valign="middle" align="center" height="90" colspan="2" rowspan="3"><font size="2" face="Verdana" color="#000080">All
+              these files are in a folder named Example.</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Database
+              (.mdb) File</font></td>
+          </tr>
+          <tr>
+            <td width="246" height="30" valign="middle" align="left"><font face="Verdana" size="2" color="#000080">Global.asa
+              File</font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p><b><font face="Verdana" size="2" color="#008080">Code Briefing:</font></b></p>
+      <ul style="font-family: Verdana; font-size: 10pt; color: #000080">
+        <li><font face="Verdana" size="2" color="#000080">Now let me tell you
+          how it works. Firstly, when the user want to visit the PROTECTED AREA
+          of your site, he/she have to register his/her name before login - <b> registration.asp</b></font></li>
+        <li><font face="Verdana" size="2" color="#000080">After completing the
+          Registration process, new user can login - <b>login.asp</b></font></li>
+        <li><font face="Verdana" size="2" color="#000080">User enters the
+          Username and Password - if the Username and Password is correct, then
+          the protected page will be open - <b>protected.asp</b></font></li>
+        <li><font face="Verdana" size="2" color="#000080">If the Username or
+          Password are incorrect - an error message will be displayed and user
+          will be redirected to login page again.</font></li>
+        <li><font face="Verdana" size="2" color="#000080">To logout the
+          protected area of the file simply click -<b> logout.asp</b></font></li>
+        <li><font face="Verdana" size="2" color="#000080">After logout, if the
+          the user/member has to login again then he/she have to login again.</font></li>
+      </ul>
+      <p align="center"><font face="Arial" color="#FF3300" size="4">Simple!</font><p><b><font face="Verdana" size="2" color="#008080">About
+      Authentication File (logincheck.asp):</font></b><p><b><font face="Verdana" size="2" color="#008080">&nbsp;</font></b>
+      <div align="center">
+        <center>
+        <table border="2" width="98%" cellpadding="5" bgcolor="#E9E9E9" bordercolor="#000080" cellspacing="0">
+          <tr>
+            <td width="100%"><p><font face="Verdana" size="2" color="#000080">Please&nbsp;
+              note that this file is very important if you have links in <b>PROTECTED
+              AREA</b> of your website and you want them not to be open without
+              login, then this code is for you.</font><p><font face="Verdana" size="2" color="#000080">Example:</font><p align="center"><font face="Verdana" size="2" color="#000080"><b>Login
+              Page</b> --&gt; After entering correct Username &amp; Password
+              opens --&gt; <b>Protected Page</b></font><p align="center"><font face="Verdana" size="2" color="#000080"><b>Protected
+              Page</b></font><p align="center"><font face="Verdana" size="2" color="#000080">|</font><p align="center"><font face="Verdana" size="2" color="#000080">Link1
+              - Link2 - Link3 - Link4 - Link5</font><p align="left"><font face="Verdana" size="2" color="#000080">Suppose
+              the user visits the PROTECTED AREA of the website on <b>Day1</b>
+              and found that there are some <b>Links</b> which are written in
+              protected page (i.e. protected.asp, in this case) and the user
+              visits one of the given link. If the user notes the <b>URL</b> of
+              that particular page then the user can easily visit that page
+              without login. To prevent this, Authentication File is used.
+              Therefore user has to login each time user visit the site.</font><p align="left"><font face="Verdana" size="2" color="#000080">There
+              are two methods to perform -&nbsp;</font><p align="left"><font face="Verdana" size="2" color="#000080">1.
+              By including Authentication File on the top of every page linked
+              to PROTECTED AREA before &lt;html&gt; tag.</font><p align="center"><b><font face="Verdana" size="2" color="#0000FF">&lt;!--#include
+              file=&quot;logincheck.asp&quot;--&gt;</font></b><p align="left"><font face="Verdana" size="2" color="#000080">2.
+              By writing the content of the logincheck.asp on the top of every
+              page PROTECTED AREA before &lt;html&gt; tag.</font>
+              <p>&nbsp;</td>
+          </tr>
+        </table>
+        </center>
+      </div>
+</center>
+
+    <p align="left"><font face="Verdana" size="2" color="#000080">Please
+    copy all files on IIS5.0 or IIS6.0 and check it yourself.</font>
+
+    <p align="left">&nbsp;
+
+    <p align="center"><font face="Verdana" size="2"><a href="http://rahul123.ipdz.com/login" target="_blank"><font color="#0000FF"><b>Click
+    Here To See The DEMO</b></font></a></font>
+
+    <p align="center"><font size="2" face="Verdana" color="#008080"><b>Important:
+    If you want to test the code on free server, then you must upload the files
+    on a free server which supports ASP and MS-Access</b></font>.<p align="center"><font face="Verdana" size="2" color="#FF0000"><b>PLEASE
+    RATE THE SCRIPT ON PLANETSOURCECODE.COM</b></font><p align="left">&nbsp;</td>
+  </tr>
+</table>
+
+<p align="center"><font face="Verdana" size="2" color="#008080">If You still face any problem then please mail me on above E-Mail address.</font></p>
+<div align="center">
+  <center>
+  <table border="0" width="100%" height="61" bgcolor="#FFA400" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="100%" height="55" valign="middle" align="center">
+        <div align="center">
+          <center>
+          <table border="0" width="600" height="49" cellspacing="0" cellpadding="0" bgcolor="#FFA400">
+            <tr>
+              <td width="598" height="18" valign="middle" align="center"><b><font face="Arial" size="3" color="#FFFFFF">Happy
+                Programming!</font></b></td>
+            </tr>
+            <tr>
+              <td width="598" height="19" valign="middle" align="center"><font face="Verdana" size="2" color="#000000">This
+                page was Designed and Developed by Rahul Mahajan on Thursday, 5<sup>th</sup>
+                May, 2005.</font></td>
+            </tr>
+          </table>
+          </center>
+        </div>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</body></html>
+
+<!--END OF THE PAGE-->

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionLogin", "http://localhost/SessionLogin/SessionLogin.csproj", "{41DD606F-0D5A-4E01-9D48-357122EA4DE0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{41DD606F-0D5A-4E01-9D48-357122EA4DE0}.Debug.ActiveCfg = Debug|.NET
+		{41DD606F-0D5A-4E01-9D48-357122EA4DE0}.Debug.Build.0 = Debug|.NET
+		{41DD606F-0D5A-4E01-9D48-357122EA4DE0}.Release.ActiveCfg = Release|.NET
+		{41DD606F-0D5A-4E01-9D48-357122EA4DE0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
